@@ -1,8 +1,8 @@
-import React from "react";
-import "./Gig.scss";
+import React from 'react'
+import './Gig.scss'
 
 const Gig = () => {
-  return <div>GIG SIngle</div>;
-};
+  return <div>GIG SIngle</div>
+}
 
-export default Gig;
+export default Gig
