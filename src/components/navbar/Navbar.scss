@@ -4,37 +4,49 @@
   align-items: center;
   background-color: #013914;
   color: white;
-  transition: 0.5s all ease;
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: 0.5s all ease;
 
   &.active {
     background-color: white;
     color: black;
+
+    button {
+      background-color: white !important;
+      color: #1dbf73 !important;
+      border: 1px solid #1dbf73 !important;
+    }
   }
-  hr {
-    width: 99% !important;
-  }
+
   .container {
     width: 1400px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 20px 0px;
+
     .logo {
       font-size: 34px;
       font-weight: bold;
+
       .dot {
+        font-weight: bold;
         color: #1dbf73;
       }
     }
-
     .links {
       display: flex;
       align-items: center;
       gap: 24px;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 500;
-      font-family: 'Montserrat', 'sans-serif';
+
+      span {
+        white-space: nowrap;
+      }
+
       .user {
         display: flex;
         align-items: center;
@@ -50,38 +62,30 @@
         }
 
         .options {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
           position: absolute;
           top: 50px;
           right: 0;
           padding: 20px;
           background-color: white;
           border-radius: 10px;
+          z-index: 999;
           border: 1px solid lightgrey;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          z-index: 1;
-          font-weight: 300;
-          font-family: 'Montserrat', 'sans-serif';
-          color: grey;
-          cursor: pointer;
-          transition: 0.5s all ease;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           width: 200px;
-
-          &:hover {
-            background-color: #1dbf73;
-            color: white;
-          }
+          font-weight: 300;
+          color: gray;
         }
       }
+
       button {
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
         border: 1px solid white;
-        cursor: pointer;
         background-color: transparent;
+        cursor: pointer;
 
         &:hover {
           background-color: #1dbf73;
@@ -90,10 +94,12 @@
       }
     }
   }
+
   hr {
-    width: 100%;
+    width: calc(100% - 2px);
     height: 0;
-    border: 0.5px solid rgb(228, 228, 228);
+    border-top: 0.5px solid #ebe9e9;
+    border-bottom: 0.5px solid #ebe9e9;
   }
 
   .menu {
@@ -101,7 +107,8 @@
     padding: 10px 0px;
     display: flex;
     justify-content: space-between;
+    color: gray;
     font-weight: 300;
-    color: grey;
+    font-family: 'Montserrat', sans-serif;
   }
 }
