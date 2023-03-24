@@ -12,6 +12,10 @@ import Message from './pages/message/Message'
 import './app.scss'
 
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import Login from './pages/login/Login'
+import Register from './pages/register/Register'
+// import Pay from './pages/pay/Pay'
+// import Success from './pages/success/Success'
 
 const App = () => {
   const Layout = () => {
@@ -36,6 +40,10 @@ const App = () => {
         { path: '/add', element: <Add /> },
         { path: '/messages', element: <Messages /> },
         { path: '/message/:id', element: <Message /> },
+        { path: '/login', element: <Login /> },
+        { path: '/register', element: <Register /> },
+        // { path: '/pay', element: <Pay /> },
+        // { path: '/success', element: <Success /> },
       ],
     },
   ])
